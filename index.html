@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hospital Blood Panel</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Firebase SDKs (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <!-- LOGIN -->
+    <div class="box" id="loginDiv">
+      <h2>Hospital Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p onclick="showRegister()">Create new hospital account</p>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="box" id="registerDiv" style="display: none">
+      <h2>Register Hospital</h2>
+      <input type="email" id="regEmail" placeholder="Email" />
+      <input type="password" id="regPassword" placeholder="Password" />
+      <button onclick="register()">Register</button>
+      <p onclick="showLogin()">Already have an account</p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard" id="dashboardDiv" style="display: none">
+      <div class="top">
+        <h1>Hospital Blood Panel</h1>
+        <button onclick="logout()">Logout</button>
+      </div>
+
+      <!-- MAIN CARDS -->
+      <div class="cards">
+        <div class="card" id="requestCard">Request Blood Units</div>
+        <div class="card" id="statusCard">Track Request Status</div>
+        <div class="card" id="availabilityCard">View Availability</div>
+      </div>
+
+      <!-- REQUEST BLOOD UNITS -->
+      <div class="section" id="requestSection" style="display: none">
+        <h3>Request Blood Units</h3>
+        <input id="reqBloodGroup" placeholder="Blood Group (e.g. A+)" />
+        <input id="reqUnits" type="number" placeholder="Units needed" />
+        <input id="reqReason" placeholder="Reason / Patient info" />
+        <button onclick="submitRequest()">Submit Request</button>
+      </div>
+
+      <!-- TRACK REQUEST STATUS -->
+      <div class="section" id="statusSection" style="display: none">
+        <h3>Request Status</h3>
+        <div id="requestList"></div>
+      </div>
+
+      <!-- VIEW AVAILABILITY -->
+      <div class="section" id="availabilitySection" style="display: none">
+        <h3>Current Blood Availability</h3>
+        <div id="availabilityList"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
