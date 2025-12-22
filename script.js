@@ -1,13 +1,4 @@
-// Firebase config (your project)
-const firebaseConfig = {
-  apiKey: "AIzaSyDO10D25fYkYgs8K0YQAT8hxoAHveYEDN0",
-  authDomain: "blood-donation-bd2dc.firebaseapp.com",
-  projectId: "blood-donation-bd2dc",
-  storageBucket: "blood-donation-bd2dc.firebasestorage.app",
-  messagingSenderId: "899939481372",
-  appId: "1:899939481372:web:0e445e9b3a3ef6b01fecd9",
-  measurementId: "G-N4CN4Z5Q14",
-};
+
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
