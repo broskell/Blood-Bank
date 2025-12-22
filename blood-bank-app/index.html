@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header / Navigation (FR-HOME-2) -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>City Blood Bank</h1>
+            <p>Blood Bank Management System</p>
+        </div>
+        <nav class="main-nav">
+            <a href="#availability">Blood Availability</a>
+            <a href="#roles">Get Started</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero / Intro Section (FR-HOME-5) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Connect Donors, Hospitals, and Blood Banks</h2>
+            <p>
+                This system helps hospitals request blood, 
+                donors register their availability, 
+                and the blood bank manage its inventory.
+            </p>
+            <p><strong>Choose your role to continue:</strong></p>
+            <div class="hero-buttons">
+                <a href="#roles" class="btn primary">I want to Donate</a>
+                <a href="#roles" class="btn secondary">I am a Hospital</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Availability Overview (FR-HOME-1) -->
+    <section id="availability" class="availability-section">
+        <h2>Current Blood Availability</h2>
+        <p class="section-desc">
+            This table shows sample availability data. 
+            In the final system, it will be updated from the blood bank inventory.
+        </p>
+
+        <table class="availability-table">
+            <thead>
+                <tr>
+                    <th>Blood Group</th>
+                    <th>Available Units</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="availability-table-body">
+                <!-- Static sample data for now -->
+                <tr>
+                    <td>A+</td>
+                    <td>12</td>
+                    <td class="status-ok">OK</td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td>4</td>
+                    <td class="status-low">Low</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>8</td>
+                    <td class="status-ok">OK</td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td>2</td>
+                    <td class="status-low">Low</td>
+                </tr>
+                <tr>
+                    <td>O+</td>
+                    <td>15</td>
+                    <td class="status-ok">OK</td>
+                </tr>
+                <tr>
+                    <td>O-</td>
+                    <td>1</td>
+                    <td class="status-critical">Critical</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>6</td>
+                    <td class="status-ok">OK</td>
+                </tr>
+                <tr>
+                    <td>AB-</td>
+                    <td>0</td>
+                    <td class="status-critical">Critical</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Role-based entry points (FR-HOME-2) -->
+    <section id="roles" class="roles-section">
+        <h2>Choose Your Role</h2>
+        <div class="role-cards">
+            <div class="role-card">
+                <h3>Donor</h3>
+                <p>
+                    Register as a blood donor, update your availability, 
+                    and help save lives.
+                </p>
+                <!-- Next page we will actually create these links -->
+                <a href="donor_register.html" class="btn primary">Register / Login</a>
+            </div>
+            <div class="role-card">
+                <h3>Hospital</h3>
+                <p>
+                    Request blood units, track request status, 
+                    and view availability.
+                </p>
+                <a href="hospital_login.html" class="btn primary">Hospital Portal</a>
+            </div>
+            <div class="role-card">
+                <h3>Admin (Blood Bank)</h3>
+                <p>
+                    Manage blood inventory, approve requests, 
+                    and monitor donors.
+                </p>
+                <a href="admin_login.html" class="btn primary">Admin Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer (FR-HOME-4) -->
+    <footer id="contact" class="main-footer">
+        <div class="footer-content">
+            <div>
+                <h3>Emergency Contact</h3>
+                <p><strong>Phone:</strong> +91-98765-43210</p>
+                <p><strong>Email:</strong> contact@citybloodbank.org</p>
+                <p><strong>Address:</strong> City Blood Bank, Main Hospital Road, Your City</p>
+            </div>
+            <div>
+                <h3>About this Project</h3>
+                <p>
+                    This is an academic mini-project demonstrating a 
+                    Blood Bank Management Web Application using 
+                    HTML, CSS, and JavaScript.
+                </p>
+            </div>
+        </div>
+        <p class="footer-bottom">
+            &copy; 2025 City Blood Bank. Academic Project.
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
