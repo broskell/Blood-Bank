@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin - Blood Bank Panel</title>
+
+    <!-- Your main CSS (you can adjust path / content) -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Firebase SDKs (compat versions) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <!-- ADMIN LOGIN -->
+    <div class="box" id="adminLoginDiv">
+      <h2>Admin Login</h2>
+      <input type="email" id="adminEmail" placeholder="Admin Email" />
+      <input type="password" id="adminPassword" placeholder="Password" />
+      <button onclick="adminLogin()">Login</button>
+      <p style="font-size: 13px; color: #636e72; cursor: default;">
+        (Use a Firebase Auth account created for admin)
+      </p>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div class="dashboard" id="adminDashboardDiv" style="display: none">
+      <div class="top">
+        <h1>Admin - Blood Bank Panel</h1>
+        <button class="top-logout" onclick="adminLogout()">Logout</button>
+      </div>
+
+      <!-- MAIN CARDS -->
+      <div class="cards">
+        <div class="card" id="invCard">Manage Inventory</div>
+        <div class="card" id="reqCard">Manage Requests</div>
+      </div>
+
+      <!-- INVENTORY MANAGEMENT -->
+      <div class="section" id="inventorySection" style="display: none">
+        <h3>Blood Inventory Management</h3>
+        <p style="font-size: 13px; color: #636e72;">
+          Update available units for each blood group. Data is stored in Firestore
+          collection <strong>inventory</strong>.
+        </p>
+        <div id="inventoryTableContainer"></div>
+      </div>
+
+      <!-- REQUEST MANAGEMENT -->
+      <div class="section" id="adminRequestsSection" style="display: none">
+        <h3>Hospital Blood Requests</h3>
+        <p style="font-size: 13px; color: #636e72;">
+          View and update status of hospital requests from the
+          <strong>blood_requests</strong> collection.
+        </p>
+        <div id="adminRequestList"></div>
+      </div>
+    </div>
+
+    <!-- Firebase config + initialization -->
+    <script>
+        // TODO: REPLACE THESE VALUES WITH YOUR REAL FIREBASE CONFIG
+        // Get them from: Firebase Console → Project Settings → General → "Your apps" → Config
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5SUAwMlWuXoWTChmh-LN76LxE56B0cLU",
+            authDomain: "blood-bank-17.firebaseapp.com",
+            projectId: "blood-bank-17",
+            storageBucket: "blood-bank-17.firebasestorage.app",
+            messagingSenderId: "1057545309574",
+            appId: "1:1057545309574:web:02fd3d4bf7caf17ee77007",
+            measurementId: "G-JF4TYRRR69"
+        };
+
+      if (!firebase.apps.length) {
+        console.log("Initializing Firebase (admin_panel.html) with config:", firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+      } else {
+        console.log("Firebase already initialized");
+      }
+    </script>
+
+    <!-- Admin logic (no firebase.initializeApp here) -->
+    <script src="js/admin.js"></script>
+  </body>
+</html>

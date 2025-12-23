@@ -749,6 +749,368 @@ section h2::after {
     font-size: 14px;
 }
 
+/* ===== Hospital Portal: Login / Register Boxes ===== */
+
+.box {
+  max-width: 420px;
+  margin: 80px auto;
+  background: var(--surface);
+  padding: 28px 24px 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--text-primary);
+}
+
+.box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition);
+}
+
+.box input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.14);
+}
+
+.box button {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.35);
+}
+
+.box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.45);
+}
+
+.box p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.box p:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* ===== Hospital Dashboard ===== */
+
+.dashboard {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: var(--surface);
+  padding: 24px 26px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.dashboard .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.dashboard .top h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.top-logout {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--secondary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.top-logout:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+/* Cards row */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--background);
+  border-radius: var(--radius-md);
+  padding: 18px 14px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background: #fff5f5;
+  color: var(--primary);
+  border-color: rgba(196, 30, 58, 0.25);
+}
+
+/* Sections inside dashboard */
+.section {
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Inputs inside sections */
+.section input {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.section input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.12);
+}
+
+/* Buttons in sections */
+.section button {
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.section button:hover {
+  background: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Request & availability lists */
+#requestList,
+#availabilityList {
+  margin-top: 10px;
+}
+
+/* Request list item */
+.request-item {
+  border-radius: var(--radius-sm);
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.request-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.request-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* Status badges for requests */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff8e1;
+  color: #b7950b;
+}
+
+.status-approved {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.status-rejected {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+/* ===== Admin Inventory Table ===== */
+
+.admin-inventory-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 12px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+}
+
+.admin-inventory-table th,
+.admin-inventory-table td {
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-inventory-table th {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.admin-inventory-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.admin-inventory-table tbody tr:hover {
+  background: #fff5f5;
+}
+
+/* Units input and save button */
+.inv-units-input {
+  width: 80px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  text-align: right;
+  outline: none;
+  transition: var(--transition);
+}
+
+.inv-units-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.12);
+}
+
+.inv-save-btn {
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.inv-save-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Admin request item row: reuse .request-item, but add controls row */
+.admin-request-actions {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.admin-request-actions select {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  font-size: 12px;
+}
+
+.admin-request-actions button {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.admin-request-actions button:hover {
+  background: var(--primary-dark);
+}
+
+/* Reuse existing availability-table and .status-ok/low/critical
+   from your homepage for availabilitySection. */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box {
+    margin: 40px 16px;
+  }
+
+  .dashboard {
+    margin: 24px 16px;
+    padding: 20px 18px 24px;
+  }
+
+  .dashboard .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
 /* Small layout adjustments on mobile for form page */
 @media (max-width: 768px) {
     .form-section {

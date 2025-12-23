@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hospital Blood Panel</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Your main CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Firebase SDKs (compat) -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -11,7 +13,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   </head>
   <body>
-    <!-- LOGIN -->
+    <!-- HOSPITAL LOGIN -->
     <div class="box" id="loginDiv">
       <h2>Hospital Login</h2>
       <input type="email" id="loginEmail" placeholder="Email" />
@@ -20,7 +22,7 @@
       <p onclick="showRegister()">Create new hospital account</p>
     </div>
 
-    <!-- REGISTER -->
+    <!-- HOSPITAL REGISTER -->
     <div class="box" id="registerDiv" style="display: none">
       <h2>Register Hospital</h2>
       <input type="email" id="regEmail" placeholder="Email" />
@@ -29,11 +31,11 @@
       <p onclick="showLogin()">Already have an account</p>
     </div>
 
-    <!-- DASHBOARD -->
+    <!-- HOSPITAL DASHBOARD -->
     <div class="dashboard" id="dashboardDiv" style="display: none">
       <div class="top">
         <h1>Hospital Blood Panel</h1>
-        <button onclick="logout()">Logout</button>
+        <button class="top-logout" onclick="logout()">Logout</button>
       </div>
 
       <!-- MAIN CARDS -->
@@ -65,6 +67,28 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Firebase config + initialization -->
+    <script>
+      // IMPORTANT: use the SAME config as in admin_panel.html
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5SUAwMlWuXoWTChmh-LN76LxE56B0cLU",
+        authDomain: "blood-bank-17.firebaseapp.com",
+        projectId: "blood-bank-17",
+        storageBucket: "blood-bank-17.firebasestorage.app",
+        messagingSenderId: "1057545309574",
+        appId: "1:1057545309574:web:02fd3d4bf7caf17ee77007",
+        measurementId: "G-JF4TYRRR69"
+      };
+
+      if (!firebase.apps.length) {
+        console.log("Initializing Firebase (hospital_portal.html) with config:", firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+      } else {
+        console.log("Firebase already initialized");
+      }
+    </script>
+
+    <!-- Hospital portal logic -->
+    <script src="js/hospital.js"></script>
   </body>
 </html>
