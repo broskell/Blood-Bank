@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Blood Bank Management System</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Header / Navigation (FR-HOME-2) -->
     <header class="main-header">
@@ -24,8 +26,8 @@
         <div class="hero-text">
             <h2>Connect Donors, Hospitals, and Blood Banks</h2>
             <p>
-                This system helps hospitals request blood, 
-                donors register their availability, 
+                This system helps hospitals request blood,
+                donors register their availability,
                 and the blood bank manage its inventory.
             </p>
             <p><strong>Choose your role to continue:</strong></p>
@@ -40,7 +42,7 @@
     <section id="availability" class="availability-section">
         <h2>Current Blood Availability</h2>
         <p class="section-desc">
-            This table shows sample availability data. 
+            This table shows sample availability data.
             In the final system, it will be updated from the blood bank inventory.
         </p>
 
@@ -96,6 +98,30 @@
                 </tr>
             </tbody>
         </table>
+    </section>
+
+    <!-- PUBLIC HEALTH DATA (Third-party API) -->
+    <section id="public-api-section" class="public-api-section">
+        <h2>Hospital Capacity (Public API)</h2>
+        <p class="section-desc">
+            This data is fetched in real time from a public API
+            (<code>api.rootnet.in</code>) that provides hospital and bed statistics
+            for Indian states.
+        </p>
+
+        <div class="public-api-box">
+            <div class="public-api-controls">
+                <label for="stateSelect">Select State:</label>
+                <select id="stateSelect">
+                    <option value="">Loading states...</option>
+                </select>
+            </div>
+
+            <div id="stateStats" class="public-api-stats">
+                <!-- Filled by JS -->
+                <p>Waiting for data...</p>
+            </div>
+        </div>
     </section>
 
     <!-- Role-based entry points (FR-HOME-2) -->

@@ -1090,6 +1090,78 @@ section h2::after {
   background: var(--primary-dark);
 }
 
+/* ===== Public API Widget (Rootnet hospital beds) ===== */
+
+.public-api-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.public-api-box {
+  margin-top: 18px;
+  padding: 20px 18px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.public-api-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.public-api-controls label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.public-api-controls select {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  font-size: 14px;
+  min-width: 220px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.public-api-controls select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.12);
+}
+
+.public-api-stats {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.public-api-stats h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.public-api-stats ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.public-api-stats li {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+  .public-api-box {
+    padding: 16px 14px;
+  }
+}
+
 /* Reuse existing availability-table and .status-ok/low/critical
    from your homepage for availabilitySection. */
 
