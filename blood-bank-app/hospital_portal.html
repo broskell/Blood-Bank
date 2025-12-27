@@ -12,64 +12,84 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   </head>
-  <body>
+  <body class="hospital-login-page">
+    
     <!-- HOSPITAL LOGIN -->
-    <div class="box" id="loginDiv">
-      <h2>Hospital Login</h2>
-      <input type="email" id="loginEmail" placeholder="Email" />
-      <input type="password" id="loginPassword" placeholder="Password" />
-      <button onclick="login()">Login</button>
-      <p onclick="showRegister()">Create new hospital account</p>
+    <div class="box login-container" id="loginDiv">
+        <!-- Logo Image -->
+        <img src="/project-assets/logo.png" alt="Hospital Logo" class="hospital-logo" />
+        
+        <h2>Hospital Login</h2>
+
+        <div class="input-group">
+            <i class="far fa-envelope input-icon"></i>
+            <input type="email" id="loginEmail" placeholder="Email" />
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Password" />
+        </div>
+
+        <button onclick="login()">Login</button>
+        <p onclick="showRegister()" class="toggle-link">Create new hospital account</p>
     </div>
 
-    <!-- HOSPITAL REGISTER -->
-    <div class="box" id="registerDiv" style="display: none">
-      <h2>Register Hospital</h2>
-      <input type="email" id="regEmail" placeholder="Email" />
-      <input type="password" id="regPassword" placeholder="Password" />
-      <button onclick="register()">Register</button>
-      <p onclick="showLogin()">Already have an account</p>
+    <!-- HOSPITAL REGISTER (Hidden) -->
+    <div class="box login-container" id="registerDiv" style="display: none">
+        <!-- Logo Image -->
+        <img src="/project-assets/logo.png" alt="Hospital Logo" class="hospital-logo" />
+        
+        <h2>Register Hospital</h2>
+
+        <div class="input-group">
+            <i class="far fa-envelope input-icon"></i>
+            <input type="email" id="regEmail" placeholder="Email" />
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="regPassword" placeholder="Password" />
+        </div>
+
+        <button onclick="register()">Register</button>
+        <p onclick="showLogin()" class="toggle-link">Already have an account</p>
     </div>
 
-    <!-- HOSPITAL DASHBOARD -->
+    <!-- DASHBOARD (Hidden) - Keep existing code -->
     <div class="dashboard" id="dashboardDiv" style="display: none">
-      <div class="top">
-        <h1>Hospital Blood Panel</h1>
-        <button class="top-logout" onclick="logout()">Logout</button>
-      </div>
+        <div class="top">
+            <h1>Hospital Blood Panel</h1>
+            <button class="top-logout" onclick="logout()">Logout</button>
+        </div>
+        
+        <div class="cards">
+            <div class="card" id="requestCard">Request Blood Units</div>
+            <div class="card" id="statusCard">Track Request Status</div>
+            <div class="card" id="availabilityCard">View Availability</div>
+        </div>
 
-      <!-- MAIN CARDS -->
-      <div class="cards">
-        <div class="card" id="requestCard">Request Blood Units</div>
-        <div class="card" id="statusCard">Track Request Status</div>
-        <div class="card" id="availabilityCard">View Availability</div>
-      </div>
+        <div class="section" id="requestSection" style="display: none">
+            <h3>Request Blood Units</h3>
+            <input id="reqBloodGroup" placeholder="Blood Group (e.g. A+)" />
+            <input id="reqUnits" type="number" placeholder="Units needed" />
+            <input id="reqReason" placeholder="Reason / Patient info" />
+            <button onclick="submitRequest()">Submit Request</button>
+        </div>
 
-      <!-- REQUEST BLOOD UNITS -->
-      <div class="section" id="requestSection" style="display: none">
-        <h3>Request Blood Units</h3>
-        <input id="reqBloodGroup" placeholder="Blood Group (e.g. A+)" />
-        <input id="reqUnits" type="number" placeholder="Units needed" />
-        <input id="reqReason" placeholder="Reason / Patient info" />
-        <button onclick="submitRequest()">Submit Request</button>
-      </div>
+        <div class="section" id="statusSection" style="display: none">
+            <h3>Request Status</h3>
+            <div id="requestList"></div>
+        </div>
 
-      <!-- TRACK REQUEST STATUS -->
-      <div class="section" id="statusSection" style="display: none">
-        <h3>Request Status</h3>
-        <div id="requestList"></div>
-      </div>
-
-      <!-- VIEW AVAILABILITY -->
-      <div class="section" id="availabilitySection" style="display: none">
-        <h3>Current Blood Availability</h3>
-        <div id="availabilityList"></div>
-      </div>
+        <div class="section" id="availabilitySection" style="display: none">
+            <h3>Current Blood Availability</h3>
+            <div id="availabilityList"></div>
+        </div>
     </div>
 
-    <!-- Firebase config + initialization -->
+    <!-- Scripts -->
     <script>
-      // IMPORTANT: use the SAME config as in admin_panel.html
       const firebaseConfig = {
         apiKey: "AIzaSyC5SUAwMlWuXoWTChmh-LN76LxE56B0cLU",
         authDomain: "blood-bank-17.firebaseapp.com",
@@ -81,14 +101,10 @@
       };
 
       if (!firebase.apps.length) {
-        console.log("Initializing Firebase (hospital_portal.html) with config:", firebaseConfig);
         firebase.initializeApp(firebaseConfig);
-      } else {
-        console.log("Firebase already initialized");
       }
     </script>
 
-    <!-- Hospital portal logic -->
     <script src="js/hospital.js"></script>
-  </body>
+</body>
 </html>
