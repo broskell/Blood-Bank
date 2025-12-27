@@ -1391,3 +1391,60 @@ section h2::after {
         width: 100%;
     }
 }
+
+/* ===== FORCE BIG FOOTER TEXT (FINAL OVERRIDE) ===== */
+
+.main-footer {
+  padding: 70px 80px 40px !important;
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 32px !important;
+  gap: 16px !important;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex:1 ;
+}
+
+.footer-logo .heart {
+  font-size: 30px !important;
+  
+}
+
+/* Section titles */
+.footer-center h4,
+.footer-right h4 {
+  font-size: 22px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Section text */
+.footer-center p,
+.footer-right p {
+  font-size: 17px !important;
+  line-height: 2 !important;
+}
+
+/* Bottom text */
+.footer-bottom {
+  font-size: 15px !important;
+  padding-top: 22px !important;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-center{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
