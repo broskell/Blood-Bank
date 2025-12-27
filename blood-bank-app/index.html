@@ -131,7 +131,7 @@
             <div class="role-card">
                 <h3>Donor</h3>
                 <p>
-                    Register as a blood donor, update your availability, 
+                    Register as a blood donor, update your availability,
                     and help save lives.
                 </p>
                 <!-- Next page we will actually create these links -->
@@ -140,7 +140,7 @@
             <div class="role-card">
                 <h3>Hospital</h3>
                 <p>
-                    Request blood units, track request status, 
+                    Request blood units, track request status,
                     and view availability.
                 </p>
                 <a href="hospital_portal.html" class="btn primary">Hospital Portal</a>
@@ -148,13 +148,41 @@
             <div class="role-card">
                 <h3>Admin (Blood Bank)</h3>
                 <p>
-                    Manage blood inventory, approve requests, 
+                    Manage blood inventory, approve requests,
                     and monitor donors.
                 </p>
                 <a href="admin_panel.html" class="btn primary">Admin Login</a>
             </div>
         </div>
     </section>
+    
+    <!-- Floating Chatbot -->
+    <div id="chatbot-root">
+        <!-- Floating button -->
+        <button id="chatbotToggleBtn" class="chatbot-floating-btn" aria-label="Open chat">
+            💬
+        </button>
+    
+        <!-- Chat window -->
+        <div id="chatbotWindow" class="chatbot-window" aria-hidden="true">
+            <div class="chatbot-header">
+                <div>
+                    <div class="chatbot-title">BloodBankBot</div>
+                    <div class="chatbot-subtitle">Ask about donors, hospitals, or admin</div>
+                </div>
+                <button id="chatbotCloseBtn" class="chatbot-close-btn" aria-label="Close chat">✕</button>
+            </div>
+    
+            <div id="chatbotMessages" class="chatbot-messages">
+                <!-- Messages will be added by JS -->
+            </div>
+    
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" placeholder="Ask something like: How to request blood?" />
+                <button id="chatbotSendBtn">Send</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact / Footer (FR-HOME-4) -->
     <footer id="contact" class="main-footer">
@@ -180,5 +208,6 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
