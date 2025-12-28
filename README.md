@@ -1,7 +1,7 @@
 # 🩸 Blood Bank Management System
 
 <div align="center">
-  <img src="assets/logo.png" alt="Blood Bank Logo" width="200"/>
+  <img src="assets/mainlogo.png" alt="Blood Bank Logo" width="200"/>
 
   **A modern web application connecting donors, hospitals, and blood banks**
 
@@ -160,19 +160,19 @@ A centralized platform that:
 
 ### Homepage Dashboard
 <div align="center">
-  <img src="assets/homepage_screenshot.png" alt="Homepage" width="800"/>
+  <img src="/blood-bank-app/assets/homepage_screenshot.png" alt="Homepage" width="800"/>
   <p><em>Real-time blood inventory and public health integration</em></p>
 </div>
 
 ### Hospital Portal
 <div align="center">
-  <img src="assets/hospital_login.png" alt="Hospital Portal" width="800"/>
+  <img src="/blood-bank-app/assets/hospital-page.png" alt="Hospital Portal" width="800"/>
   <p><em>Secure hospital authentication and request management</em></p>
 </div>
 
 ### Admin Panel
 <div align="center">
-  <img src="assets/adminpage-background.png" alt="Admin Panel" width="800"/>
+  <img src="/blood-bank-app/assets/admin-page.png" alt="Admin Panel" width="800"/>
   <p><em>Comprehensive inventory and request management</em></p>
 </div>
 
@@ -652,36 +652,39 @@ in the Software without restriction...
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/developer1">
+      <a href="https://github.com/broskell">
         <img src="https://github.com/developer1.png" width="100px;" alt="Developer 1"/><br />
-        <sub><b>Rajesh Kumar</b></sub>
+        <sub><b>kellampalli Saathvik</b></sub>
       </a><br />
-      <sub>Lead Developer</sub><br />
-      <sub>Frontend & Firebase Integration</sub>
+      <sub>Backend, API, Deployment </sub>
     </td>
     <td align="center">
-      <a href="https://github.com/developer2">
+      <a href="https://github.com/shivakumar-dev-11">
         <img src="https://github.com/developer2.png" width="100px;" alt="Developer 2"/><br />
-        <sub><b>Priya Sharma</b></sub>
+        <sub><b>Bashamoni Shiva Kumar</b></sub>
       </a><br />
-      <sub>Backend Developer</sub><br />
-      <sub>Database Design & API</sub>
+      <sub>Developer</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/developer3">
+      <a href="https://github.com/ashwith-dev">
         <img src="https://github.com/developer3.png" width="100px;" alt="Developer 3"/><br />
-        <sub><b>Amit Patel</b></sub>
+        <sub><b>Ashwith Thatipally</b></sub>
       </a><br />
-      <sub>UI/UX Designer</sub><br />
-      <sub>Interface & Experience</sub>
+      <sub>UI/UX Designer</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/developer4">
+      <a href="https://github.com/Abhishek-9347">
         <img src="https://github.com/developer4.png" width="100px;" alt="Developer 4"/><br />
-        <sub><b>Sneha Reddy</b></sub>
+        <sub><b>Abhishek Singh</b></sub>
       </a><br />
-      <sub>Quality Assurance</sub><br />
-      <sub>Testing & Documentation</sub>
+      <sub>UI/UX Designer</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/akulaakash17-byte">
+        <img src="https://github.com/developer4.png" width="100px;" alt="Developer 4"/><br />
+        <sub><b>Akash Akula</b></sub>
+      </a><br />
+      <sub>Quality Assurance & Testing</sub>
     </td>
   </tr>
 </table>
@@ -714,8 +717,6 @@ Special thanks to:
 
 - 🐛 **Bug Reports:** [GitHub Issues](https://github.com/broskell/Blood-Bank/issues)
 - 💬 **Discussions:** [GitHub Discussions](https://github.com/yourusername/Blood-Bank/discussions)
-- 📧 **Email:** bloodbank.support@example.com
-- 📱 **Phone:** +91-XXXXXXXXXX
 
 ### Frequently Asked Questions
 
