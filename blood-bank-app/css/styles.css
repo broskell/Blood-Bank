@@ -1387,7 +1387,7 @@ section h2::after {
 
 body.hospital-login-page {
     /* Correct path to your asset */
-    background: url("/blood-bank-app/assets/hospital_login.png") no-repeat center center fixed;
+    background: url("/assets/hospital_login.png") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -1633,7 +1633,7 @@ body.hospital-login-page {
 /* Style the page body to include the background image */
 /* We target the body when the admin login div is present */
 body:has(#adminLoginDiv) {
-    background: url("/blood-bank-app/assets/adminpage-background.png") no-repeat right center fixed;
+    background: url("/assets/adminpage-background.png") no-repeat right center fixed;
     background-size: cover; 
     background-color: #f4f6f8;
     display: flex;
