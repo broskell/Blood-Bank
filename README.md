@@ -1,7 +1,7 @@
 # 🩸 Blood Bank Management System
 
 <div align="center">
-  <img src="assets/mainlogo.png" alt="Blood Bank Logo" width="200"/>
+  <img src="/blood-bank-app/assets/mainlogo.png" alt="Blood Bank Logo" width="200"/>
 
   **A modern web application connecting donors, hospitals, and blood banks**
 
@@ -653,14 +653,14 @@ in the Software without restriction...
   <tr>
     <td align="center">
       <a href="https://github.com/broskell">
-        <img src="https://github.com/developer1.png" width="100px;" alt="Developer 1"/><br />
+        <img src="https://avatars.githubusercontent.com/u/226131454?v=4" width="100px;" alt="Developer 1"/><br />
         <sub><b>kellampalli Saathvik</b></sub>
       </a><br />
       <sub>Backend, API, Deployment </sub>
     </td>
     <td align="center">
       <a href="https://github.com/shivakumar-dev-11">
-        <img src="https://github.com/developer2.png" width="100px;" alt="Developer 2"/><br />
+        <img src="https://avatars.githubusercontent.com/u/233956833?v=4" width="100px;" alt="Developer 2"/><br />
         <sub><b>Bashamoni Shiva Kumar</b></sub>
       </a><br />
       <sub>Developer</sub>
@@ -674,14 +674,14 @@ in the Software without restriction...
     </td>
     <td align="center">
       <a href="https://github.com/Abhishek-9347">
-        <img src="https://github.com/developer4.png" width="100px;" alt="Developer 4"/><br />
+        <img src="https://github.com/developer2.png" width="100px;" alt="Developer 4"/><br />
         <sub><b>Abhishek Singh</b></sub>
       </a><br />
       <sub>UI/UX Designer</sub>
     </td>
     <td align="center">
       <a href="https://github.com/akulaakash17-byte">
-        <img src="https://github.com/developer4.png" width="100px;" alt="Developer 4"/><br />
+        <img src="https://github.com/developer3.png" width="100px;" alt="Developer 4"/><br />
         <sub><b>Akash Akula</b></sub>
       </a><br />
       <sub>Quality Assurance & Testing</sub>
