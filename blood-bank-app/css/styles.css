@@ -652,7 +652,7 @@ section h2::after {
 
 /* Message box at top of form (success / error) */
 .form-message {
-    display: none; /* shown by JS */
+    display: none;
     margin-bottom: 16px;
     padding: 10px 14px;
     border-radius: var(--radius-sm);
@@ -747,6 +747,22 @@ section h2::after {
 .form-actions .btn {
     padding: 10px 22px;
     font-size: 14px;
+}
+
+/* Small layout adjustments on mobile for form page */
+@media (max-width: 768px) {
+    .form-section {
+        margin: 24px 16px;
+        padding: 24px 18px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
 }
 
 /* ===== Hospital Dashboard ===== */
@@ -989,7 +1005,7 @@ section h2::after {
   background: var(--primary-dark);
 }
 
-/* Admin request item row: reuse .request-item, but add controls row */
+/* Admin request item row extra controls */
 .admin-request-actions {
   margin-top: 6px;
   display: flex;
@@ -1133,7 +1149,7 @@ section h2::after {
   background: var(--surface, #ffffff);
   border-radius: 16px;
   box-shadow: var(--shadow-lg, 0 8px 30px rgba(0, 0, 0, 0.3));
-  display: none; /* hidden by default */
+  display: none;
   flex-direction: column;
   overflow: hidden;
 }
@@ -1272,7 +1288,7 @@ section h2::after {
   background: #e3e3e3;
 }
 
-/* Responsive tweak */
+/* Chatbot responsive tweak */
 @media (max-width: 480px) {
   .chatbot-window {
     width: 90vw;
@@ -1286,10 +1302,7 @@ section h2::after {
   }
 }
 
-/* Reuse existing availability-table and .status-ok/low/critical
-   from your homepage for availabilitySection. */
-
-/* Responsive */
+/* Dashboard responsive */
 @media (max-width: 768px) {
   .box {
     margin: 40px 16px;
@@ -1307,58 +1320,36 @@ section h2::after {
   }
 }
 
-/* Small layout adjustments on mobile for form page */
-@media (max-width: 768px) {
-    .form-section {
-        margin: 24px 16px;
-        padding: 24px 18px;
-    }
-
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .form-actions .btn {
-        width: 100%;
-    }
-}
-
 /* ===== FORCE BIG FOOTER TEXT (FINAL OVERRIDE) ===== */
 
 .main-footer {
   padding: 70px 80px 40px !important;
 }
 
-/* Logo */
 .footer-logo {
   font-size: 32px !important;
   gap: 16px !important;
-  font-size: 16px;
   font-weight: bold;
   display: flex;
-  flex:1 ;
+  flex: 1;
 }
 
 .footer-logo .heart {
   font-size: 30px !important;
-  
 }
 
-/* Section titles */
 .footer-center h4,
 .footer-right h4 {
   font-size: 22px !important;
   margin-bottom: 16px !important;
 }
 
-/* Section text */
 .footer-center p,
 .footer-right p {
   font-size: 17px !important;
   line-height: 2 !important;
 }
 
-/* Bottom text */
 .footer-bottom {
   font-size: 15px !important;
   padding-top: 22px !important;
@@ -1380,24 +1371,23 @@ section h2::after {
   flex:1;
 }
 
-
 /* =========================================
-   Redesigned Login Page Styles
+   Hospital Login Page Background + Layout
    ========================================= */
 
 body.hospital-login-page {
-    /* Correct path to your asset */
-    background: url("/assets/hospital_login.png") no-repeat center center fixed;
+    /* RELATIVE path from css/styles.css -> ../assets/... */
+    background: url("../assets/hospital_login.png") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align left */
-    padding-left: 10%; /* Spacing from left */
+    padding-left: 10%;          /* Spacing from left */
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Update the box style specifically for login */
+/* Login container */
 .box.login-container {
     background: #ffffff;
     width: 100%;
@@ -1406,26 +1396,8 @@ body.hospital-login-page {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 0; /* Remove auto margins */
+    margin: 0;
     position: relative;
-}
-
-/* Red Cross Circle */
-.logo-circle {
-    width: 60px;
-    height: 60px;
-    background: #c21c33; /* Deep Red */
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(194, 28, 51, 0.3);
-}
-
-.logo-circle i {
-    color: white;
-    font-size: 24px;
 }
 
 /* Typography */
@@ -1453,14 +1425,14 @@ body.hospital-login-page {
 
 .box.login-container input {
     width: 100%;
-    padding: 12px 12px 12px 45px; /* Left padding for icon */
+    padding: 12px 12px 12px 45px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     font-size: 14px;
     color: #374151;
     background-color: #ffffff;
     transition: all 0.2s;
-    margin-bottom: 0; /* Override default */
+    margin-bottom: 0;
 }
 
 .box.login-container input:focus {
@@ -1503,17 +1475,9 @@ body.hospital-login-page {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body.hospital-login-page {
-        justify-content: center;
-        padding-left: 0;
-    }
-}
-
-
+/* Hospital logo image */
 .hospital-logo {
-    width: 80px;  
+    width: 80px;
     height: auto;
     margin-bottom: 20px;
     display: block;
@@ -1521,11 +1485,19 @@ body.hospital-login-page {
     margin-right: auto;
 }
 
-
 .box.login-container {
     padding-top: 40px; 
 }
 
+/* Hospital login responsive */
+@media (max-width: 768px) {
+    body.hospital-login-page {
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+
+/* Footer left layout */
 .footer-left{
    flex: 1;
    display: flex;
@@ -1535,88 +1507,9 @@ body.hospital-login-page {
 }
 
 /* =========================================
-   Admin Login Page Redesign
+   Admin Login Page Redesign + Background
    ========================================= */
 
-/* Center the login box on the screen */
-#adminLoginDiv {
-    background-color: #ffffff; 
-    width: 90%;
-    max-width: 420px;
-    margin: 100px auto; 
-    padding: 40px 30px;
-    border-radius: 20px; 
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); 
-    text-align: center;
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.02);
-}
-
-
-#adminLoginDiv h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2d3436;
-    margin-bottom: 25px;
-}
-
-
-#adminLoginDiv input {
-    width: 100%;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 15px;
-    color: #2d3436;
-    background: #ffffff;
-    transition: all 0.2s ease;
-    box-sizing: border-box; 
-    outline: none;
-}
-
-#adminLoginDiv input:focus {
-    border-color: #c41e3a; 
-    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
-}
-
-#adminLoginDiv input::placeholder {
-    color: #a0aec0;
-}
-
-
-#adminLoginDiv button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    background: #c41e3a; 
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(196, 30, 58, 0.2);
-}
-
-#adminLoginDiv button:hover {
-    background: #a01830;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(196, 30, 58, 0.3);
-}
-
-#adminLoginDiv button:active {
-    transform: translateY(0);
-}
-
-#adminLoginDiv p {
-    margin-top: 20px;
-    font-size: 13px !important;
-    color: #636e72 !important;
-}
-
-/* Center the login box on the screen */
 #adminLoginDiv {
     background-color: #ffffff;
     width: 100%;
@@ -1627,13 +1520,13 @@ body.hospital-login-page {
     text-align: center;
     position: relative;
     margin: 0;
-    margin-left: 10%; 
+    margin-left: 10%;
 }
 
-/* Style the page body to include the background image */
-/* We target the body when the admin login div is present */
+/* Admin Login body background using :has */
 body:has(#adminLoginDiv) {
-    background: url("/assets/adminpage-background.png") no-repeat right center fixed;
+    /* RELATIVE path from css/styles.css -> ../assets/... */
+    background: url("../assets/adminpage-background.png") no-repeat right center fixed;
     background-size: cover; 
     background-color: #f4f6f8;
     display: flex;
@@ -1704,7 +1597,7 @@ body:has(#adminLoginDiv) {
     color: #94a3b8 !important;
 }
 
-/* Responsive adjustment for mobile */
+/* Responsive adjustment for admin mobile */
 @media (max-width: 768px) {
     body:has(#adminLoginDiv) {
          background-position: center; 
