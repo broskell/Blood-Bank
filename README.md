@@ -5,7 +5,7 @@
 
   **A modern web application connecting donors, hospitals, and blood banks**
 
-  [🚀 Live Demo](#) • [📖 Documentation](#-features) • [🐛 Report Bug](https://github.com/yourusername/blood-bank-app/issues)
+  [🚀 Live Demo](https://blood-bank-xi-eight.vercel.app) • [📖 Documentation](#-features) • [🐛 Report Bug](https://github.com/broskell/Blood-Bank/issues)
 
   [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red)](https://github.com/yourusername/blood-bank-app)
   [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
@@ -267,9 +267,12 @@ hospitals/{hospitalId}
 ```
 blood-bank-app/
 ├── assets/
+│   ├── admin-page.png              # Admin panel screenshot
 │   ├── logo.png                    # Application logo
-│   ├── hospital_login.png          # Hospital portal screenshot
-│   ├── adminpage-background.png    # Admin panel screenshot
+│   ├── hospital_login.png          # Hospital portal background
+│   ├── hospital_page.png           # Hospital portal screenshot
+│   ├── adminpage-background.png    # Admin panel background 
+│   ├── mainlogo.png                # Main Application logo
 │   └── homepage_screenshot.png     # Homepage screenshot
 │
 ├── css/
