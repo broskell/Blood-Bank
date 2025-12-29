@@ -1597,6 +1597,25 @@ body:has(#adminLoginDiv) {
     color: #94a3b8 !important;
 }
 
+/* Inputs inside sections */
+.section input,
+.section select {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #dde1e3;
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.section input:focus,
+.section select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.12);
+}
+
 /* Responsive adjustment for admin mobile */
 @media (max-width: 768px) {
     body:has(#adminLoginDiv) {
